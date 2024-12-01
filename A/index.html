@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Game Database</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="logo.svg" alt="Logo"></a>
+        <input type="text" id="searchBar" placeholder="Search for games...">
+    </header>
+    <main>
+        <h2 id="topGamesTitle">Top 5 Games</h2>
+        <div class="games" id="topGames"></div>
+
+        <h2 id="searchResultTitle" style="display: none;">Searched Game</h2>
+        <div id="searchResult"></div>
+    </main>
+    <footer>
+        <p>
+            Tato herní databáze byla vytvořena pomocí <a href="https://rawg.io/apidocs">RAWG API</a>. 
+        </p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

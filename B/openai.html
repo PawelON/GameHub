@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>OpenAI spouští ChatGPT Search. Webový AI vyhledávač konkuruje i Googlu</title>
+    </head>
+    <body>
+        <div id="header">
+            <nav id="nav-header">
+                <ul id="nav-ul-social">
+                    <a href="index.html" class="nav-header-left">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                            <path d="M279.1 288l14.2-92.7h-88.9v-60.1c0-25.4 12.4-50.1 52.2-50.1h40.4V6.3S260.4 0 225.4 0c-73.2 0-121.1 44.4-121.1 124.7v70.6H22.9V288h81.4v224h100.2V288z"/>
+                        </svg></a>
+                    <a href="index.html" class="nav-header-left">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/>
+                        </svg></a>
+                    <a href="index.html" class="nav-header-left">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
+                        </svg></a>
+                    <a href="index.html" class="nav-header-left">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                        </svg></a>
+                    <a href="index.html" class="nav-header-left">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/>
+                        </svg></a>
+                    <a href="index.html" class="nav-header-left">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM0 416a64 64 0 1 1 128 0A64 64 0 1 1 0 416zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/>
+                        </svg></a>
+                </ul>
+                    <a href="index.html" class="nav-header-logo"><img src="images/zive_logo.svg" alt="ŽIVĚ.CZ" width="75" height="40"></a>
+                <ul id="nav-ul-user">
+                    <a href="index.html" class="nav-header-right" id="zive-premium">Živě Premium</a>
+                    <a href="register.html" class="nav-header-right">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464l349.5 0c-8.9-63.3-63.3-112-129-112l-91.4 0c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3z"/>
+                        </svg></a>
+                    <a href="index.html" class="nav-header-right">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                        </svg></a>
+                    <a href="index.html" class="nav-header-right">
+                        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+                        </svg></a>
+                </ul>
+            </nav>
+            <nav>
+                <ul id="ul-categories">
+                    <a href="index.html"><svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
+                    </svg> ŽIVĚ.CZ</a>
+                    <a href="index.html">POČÍTAČE</a>
+                    <a href="index.html">MOBILY</a>
+                    <a href="index.html">VĚDA A TECHNIKA</a>
+                    <a href="index.html">HRY</a>
+                    <a href="index.html">FILMY A AV</a>
+                </ul>
+            </nav>
+            <nav>
+                <ul id="ul-other">
+                    <a href="index.html">Poradna</a>
+                    <a href="index.html">Diskuzní fórum</a>
+                    <a href="index.html">Katalog mobilů</a>
+                    <a href="index.html">Testy</a>
+                    <a href="index.html">Zboží Živě</a>
+                    <a href="index.html">Časopis Computer</a>
+                </ul>
+            </nav>
+        </div>
+        <div id="content-specific">
+            <div class="content-specific-item">
+                <div class="carousel-container">
+                    <button class="arrow left" onclick="moveLeft()">&#9664;</button>
+                    <div class="carousel">
+                        <div class="carousel-track">
+                            <!-- Add your images here -->
+                            <img src="images/openai-carousel1.jpg" alt="Image 1">
+                            <img src="images/openai-carousel2.jpg" alt="Image 2">
+                            <img src="images/openai-carousel3.jpg" alt="Image 3">
+                            <img src="images/openai-carousel4.jpg" alt="Image 4">
+                            <img src="images/openai-carousel5.jpg" alt="Image 5">
+                        </div>
+                    </div>
+                    <button class="arrow right" onclick="moveRight()">&#9654;</button>
+                </div>
+                
+                <h1 class="content-item-title-ryzen">OpenAI spouští ChatGPT Search. Webový AI vyhledávač konkuruje i Googlu</h1>
+                <p class="content-specific-item-author">Autor: Jakub Čížek</p>
+                <p class="content-specific-item-text">
+                    Předplatitelé ChatGPT Plus a Team se před pár dny konečně dočkali vyhledávače ve vlastní historii, který chyběl jako sůl, 
+                    no a od dneška získávají přístup také k novému vyhledávání na webu.
+                </p>
+                <img src="images/openai-img1.jpg">
+                <p class="content-specific-item-text">
+                    Najdete jej pod ikonkou glóbu hned vedle přílohy. Protože se jedná o speciálně upravený model GPT-4o, 
+                    který umí získávat data od různých poskytovatelů, funkce je zatím dostupná jen v této verzi umělé inteligence.
+                </p>
+                <h1>V postranním panelu se zobrazí citace a výsledky jako v klasickém vyhledávači</h1>
+                <p class="content-specific-item-text">
+                    S aktivním vyhledáváním na webu doplní chatbot odpověď o tlačítko na zdroje, které se zobrazí v postranním panelu a připomínají klasické výsledky z Googlu.
+                     Některé odpovědi pak chatbot zobrazí i s jednoduchou grafikou a fotografiemi podobně, jako to dělá i Google.
+                </p>
+                <img src="images/openai-img2.jpg">
+                <p class="content-specific-item-text">
+                    Díky vyhledávači se nyní nabízejí i poněkud bizarní scénáře. Třeba vyhledání jízdního řádu šaliny z redakce domů. 
+                    Čas se sice v příkladu níže liší od oficiálního jízdního řádu o dvě minuty, nicméně konkrétní spoj měl dvě minuty zpoždění, takže to asi bude v pořádku.
+                </p>
+                <img src="images/openai-img3.jpg">
+                <h1>Přístup přímo z adresního řádku Chromu</h1>
+                <p class="content-specific-item-text">
+                    OpenAI skutečně hodlá soupeřit s klasickými vyhledávači, a proto je k dispozici i oficiální doplněk pro Chrome, 
+                    který přenastaví konfiguraci adresního řádku tak, aby se povel z Chromu vyřešil a zobrazil rovnou v ChatGPT.
+                </p>
+                <img src="images/openai-img4.jpg">
+                <p class="content-specific-item-text">
+                    AI vyhledávač bude pro předplatitele k dispozici nejen na webu, ale co nevidět také v mobilních a desktopových aplikacích.
+                </p>
+                <p class="content-specific-item-text">
+                    V následujících týdnech se k němu dostanou také uživatelé verzí Enterprise a Edu, OpenAI ale dle svých slov nezapomene ani na ty,
+                    kteří si s ChatGPT hrají zdarma. Ti si ovšem budou muset počkat přinejmenším několik měsíců.
+                </p>
+                <img src="images/openai-img5.jpg">
+            </div>
+        </div>
+        <div id="content-mid">
+            <h1>URČITĚ SI PŘEČTĚTE</h1>
+            <div class="content-mid-item">
+                <img src="images/windows_upgrade.jfif">
+                <div class="content-mid-item-title"><a href="openai.html">Jak upgradovat nekompatibilní počítač na Windows 11 24H2? S Flyby11 jen párkrát kliknete</a></div>
+                <div class="content-mid-item-author-date">P. Urban 28. 10. 2024</div>
+            </div>
+            <div class="content-mid-item">
+                <img src="images/windows10_ocr.jfif">
+                <div class="content-mid-item-title"><a href="openai.html">Fotografie zvětší vaše fotografie až 8x, zatím ale jen na Snapdragonech. Ve Windows 10 nabídnou OCR</a></div>
+                <div class="content-mid-item-author-date">P. Urban 1. 11. 2024</div>
+            </div>
+            <div class="content-mid-item">
+                <img src="images/apple_pixelmator.jfif">
+                <div class="content-mid-item-title"><a href="openai.html">Apple může vytvořit vlastní Photoshop. Kupuje tvůrce šikovného Pixelmatoru</a></div>
+                <div class="content-mid-item-author-date">L. Václavík 1. 11. 2024</div>
+            </div>
+            <div class="content-mid-item">
+                <img src="images/chrome_agresivity.jfif">
+                <div class="content-mid-item-title"><a href="openai.html">Ve Chromu si určíte agresivitu uspávání karet na pozadí a zlepšíte výkon klepnutím</a></div>
+                <div class="content-mid-item-author-date">P. Urban 1. 11. 2024</div>
+            </div>
+            <div class="content-mid-item">
+                <img src="images/ai_pc.jfif">
+                <div class="content-mid-item-title"><a href="openai.html">AI PC je zatím jen nálepka, v budoucnu standard. Hardware je připravený a začínají přicházet i software</a></div>
+                <div class="content-mid-item-author-date">T. Holčík 1. 11. 2024</div>
+            </div>
+            <div class="content-mid-item">
+                <img src="images/android_wireless.jfif">
+                <div class="content-mid-item-title"><a href="openai.html">Androidy a bezdrátové nabíjení. Je pomalé, anebo potřebujete speciální nabíječku. Podpora Qi2 se nekoná</a></div>
+                <div class="content-mid-item-author-date">M. Chroust 30. 10. 2024</div>
+            </div>
+        </div>
+        <div id="timer">Na této stránce jste: 0 sekund</div>
+        <div id="footer">
+            <div id="footer-top">
+                <div id="footer-title">Nejvíc vás zajímá</div>
+                <a href="index.html"><img src="images/cnc_logo.svg" alt="ŽIVĚ.CZ" width="100" height="40"></a>
+            </div>
+            <div id="footer-interest">
+                <a href="index.html" class="footer-interest-a">INFO.cz</a>
+                <a href="index.html" class="footer-interest-a">Moje Psychologie</a>
+                <a href="index.html" class="footer-interest-a">Liga mistrů 2024/25</a>
+                <a href="index.html" class="footer-interest-a">Hráči na Blesku</a>
+                <a href="index.html" class="footer-interest-a">Kam na houby</a>
+                <a href="index.html" class="footer-interest-a">Barum Rally 2024</a>
+                <a href="index.html" class="footer-interest-a">Tipovačka StarDance 2024</a>
+                <a href="index.html" class="footer-interest-a">Minimální zálohy OSVČ 2024</a>
+                <a href="index.html" class="footer-interest-a">Apple Keynote 2024</a>
+                <a href="index.html" class="footer-interest-a">MS v letním biatlonu 2024</a>
+                <a href="index.html" class="footer-interest-a">StarDance 2024</a>
+                <a href="index.html" class="footer-interest-a-last">Clash of the stars 9</a>
+            </div>
+            <div id="footer-contact">
+                <a href="index.html" class="footer-contact-a">Napište nám</a>
+                <a href="index.html" class="footer-contact-a">Redakce</a>
+                <a href="index.html" class="footer-contact-a">Inzerce</a>
+                <a href="index.html" class="footer-contact-a">Témata</a>
+                <a href="index.html" class="footer-contact-a">RSS</a>
+                <a href="index.html" class="footer-contact-a-last">Kariéra</a>
+            </div>
+            <div id="footer-copyright">
+                Studentský projekt, inspirovaný webem <a href="https://www.zive.cz">Živě.cz</a>
+            </div>
+        </div>
+        <script src="carousel.js"></script>
+        <script src="counter.js"></script>
+    </body>
+</html>
